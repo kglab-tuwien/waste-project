@@ -1,0 +1,35 @@
+version: "3.7"
+services:
+ api:
+  environment:
+   OSRM_URL: ${OSRM_URL}
+   DB_CONN_STRING: ${DB_CONN_STRING}
+   DB_NAME: ${DB_NAME}
+   COLLECTION_NAME: ${COLLECTION_NAME}
+   KG_URI: ${KG_URI}
+   KG_PASSWORD: ${KG_PASSWORD}
+  build:
+   context: .
+   target: build
+  networks:
+   test-network:
+    ipv4_address: 172.23.0.5
+  volumes:
+   - ./:/app
+   - /app/node_modules
+   - /app/lkh-input
+   - /app/lkh-output
+  ports:
+   - 4000:4000
+   - 9229:9229
+  command: npm run dev
+
+
+
+networks:
+ test-network:
+  name: test-network
+  external: true
+  ipam:
+   config:
+    - subnet: 172.23.0.0/16

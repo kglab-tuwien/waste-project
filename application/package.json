@@ -1,0 +1,53 @@
+{
+  "name": "typescript-docker-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev --poll src/index.ts",
+    "debug": "node --inspect-brk=0.0.0.0 -r ts-node/register src/index.ts",
+    "build": "rimraf ./dist && tsc",
+    "start": "npm run build && node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@stdlib/stats": "^0.3.3",
+    "@stdlib/stats-base-dists-t": "^0.2.2",
+    "@stdlib/types": "^0.4.3",
+    "@types/axios": "^0.14.0",
+    "@types/compute-quantile": "^1.0.2",
+    "@types/mongoose": "^5.11.97",
+    "@types/object-hash": "^3.0.6",
+    "@types/prompts": "^2.4.9",
+    "axios": "^1.6.0",
+    "compute-quantile": "^1.0.1",
+    "cors": "^2.8.5",
+    "docker-nodejs": "^1.0.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "fft.js": "^4.0.4",
+    "jstat": "^1.9.6",
+    "mathjs": "^14.0.1",
+    "mongodb": "^6.1.0",
+    "mongoose": "^7.6.1",
+    "neo4j-driver": "^5.13.0",
+    "object-hash": "^3.0.0",
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.10.5",
+    "@typescript-eslint/eslint-plugin": "^5.39.0",
+    "@typescript-eslint/parser": "^5.39.0",
+    "eslint": "^8.25.0",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.7.1",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.5"
+  }
+}

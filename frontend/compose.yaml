@@ -1,0 +1,27 @@
+version: "3.7"
+services:
+ frontend:
+  environment:
+   BACKEND_URL: ${BACKEND_URL}
+  build:
+   context: .
+   target: build
+  networks:
+   test-network:
+    ipv4_address: 172.23.0.6
+  volumes:
+   - ./:/app
+   - /app/node_modules
+  ports:
+   - "4001:4001"
+  command: npm run start
+
+
+
+networks:
+ test-network:
+  name: test-network
+  external: true
+  ipam:
+   config:
+    - subnet: 172.23.0.0/16

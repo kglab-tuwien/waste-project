@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  app:
+    environment:
+      KG_URI: ${KG_URI}
+      KG_PASSWORD: ${KG_PASSWORD}
+    build: .
+    volumes:
+      - .:/app
+    networks:
+      test-network:
+        ipv4_address: 172.23.0.9
+
+networks:
+ test-network:
+  name: test-network
+  external: true
+  ipam:
+   config:
+    - subnet: 172.23.0.0/16
