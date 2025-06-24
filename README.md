@@ -8,7 +8,7 @@ This repository contains the code and experiments accompanying the master's thes
 **“[Knowledge Graph-Driven Tour Optimization for Sustainable Waste Collection](https://doi.org/10.34726/hss.2025.124320)”**  
 by Adrian Bracher under the supervision of Markus Nissl and Emanuel Sallinger @ TU Wien
 
-Our work has been supported by the [Vienna Science and Technology Fund WWTF](https://www.wwtf.at) under the project [NXT22-018](https://www.wwtf.at/funding/programmes/vrg/VRG18-013/). 
+Our work has been supported by the [Vienna Science and Technology Fund WWTF](https://www.wwtf.at) under the projects [NXT22-018](https://www.wwtf.at/funding/programmes/vrg/NXT22-018/) and [VRG18-013](https://www.wwtf.at/funding/programmes/vrg/VRG18-013/). 
 
 <img src="https://www.wwtf.at/img/page/wwtf-logo-web.svg" height="48" alt="WWTF logo">
 <img src="https://kg.dbai.tuwien.ac.at/images/kglab-tuwien-logo.svg" height="48" alt="TU KGLAB logo">
